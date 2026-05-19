@@ -1,0 +1,269 @@
+/* Main Container */
+.chatbot-container {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  position: relative;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 222px;
+  height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/* Messages Area */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 80px 200px 120px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 3px;
+}
+
+.message-container {
+  display: flex;
+  width: 100%;
+}
+
+.message-container.bot {
+  justify-content: flex-start;
+}
+
+.message-container.user {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.message-bubble.bot {
+  max-width: 800px;
+  background: transparent;
+  padding: 16px 8px;
+}
+
+.message-bubble.user {
+  max-width: 608px;
+  background: #fed7aa;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.message-text {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0f172a;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.message-text strong {
+  font-weight: 600;
+}
+
+.message-list {
+  margin: 8px 0 8px 20px;
+  padding: 0;
+}
+
+.message-list li {
+  margin: 4px 0;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #475569;
+  animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+/* Input Area */
+.chat-input {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 12px 12px 12px 24px;
+  gap: 12px;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0f172a;
+  background: transparent;
+}
+
+.chat-input input::placeholder {
+  color: #475569;
+}
+
+.chat-input input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.send-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.send-btn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.send-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.send-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chatbot-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px;
+  }
+
+  .main-content {
+    height: auto;
+    flex: 1;
+  }
+
+  .chat-messages {
+    padding: 40px 20px 100px 20px;
+  }
+
+  .chat-input {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .message-bubble.bot,
+  .message-bubble.user {
+    max-width: 90%;
+  }
+}
+
+/* Made with Bob */
