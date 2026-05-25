@@ -415,6 +415,3 @@ AI-powered tool to create calendar links from messages, tickets, or itineraries.
 UX Designer, Product Designer, Enterprise UX, AI Products, Design Systems, IBM Designer, Nestlé Enterprise Systems, FIFA Systems, Interaction Design, UX Research, Prototyping, Front-End Development, AI Workflows, Agentic Systems, Product Strategy, Material Design, Global Stakeholder Management, Scalable Design, AI-Assisted Design
 
 ---
-
-## Additional Context
-Currently working on cutting-edge AI-powered enterprise systems at IBM for Nestlé, focusing on agent builders and scalable platform design. Previously led design for FIFA's global referee management system, impacting 211 countries and transforming how international football operations manage referees worldwide.
