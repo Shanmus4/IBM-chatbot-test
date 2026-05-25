@@ -149,7 +149,7 @@ function App() {
       {/* Sidebar */}
       <div className="sidebar">
         <div className="user-info">
-          <div className="user-image">
+          <div className="user-image" data-tooltip="sup?">
             <img src={imgUserImage} alt="User" />
           </div>
         </div>
