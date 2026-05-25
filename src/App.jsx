@@ -72,7 +72,7 @@ function App() {
     {
       id: 1,
       type: 'bot',
-      text: '👋 Hey there! I\'m Shanmu - well, a digital version of me powered by some cool AI magic! ⚡\n\nFeel free to ask me anything about my work, skills, projects, or whatever you\'re curious about! I\'m an open book... well, mostly! 😄\n\n💡 Just a heads up: If you ask me something super personal (like my Aadhaar number 🙈) or totally random stuff I don\'t know about, I\'ll let you know in a fun way!\n\nSo... what\'s on your mind? Fire away! 🚀',
+      text: '👋 Hey there! I\'m Shanmu - well, a digital version of me powered by some cool AI magic! ⚡\n\nFeel free to ask me anything about my work, skills, projects, or whatever you\'re curious about! I\'m an open book... well, mostly! 😄\n\n💡 Just a heads up: I won\'t share super personal details (like my Aadhaar number 🙈), but I\'m happy to chat about pretty much everything else!\n\nSo... what\'s on your mind? Fire away! 🚀',
       time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
     }
   ]);
